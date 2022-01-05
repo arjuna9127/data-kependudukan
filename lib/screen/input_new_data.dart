@@ -16,6 +16,8 @@ class _InputNewDataState extends State<InputNewData> {
   TextEditingController suku = TextEditingController();
   TextEditingController agama = TextEditingController();
   TextEditingController lahir = TextEditingController();
+  TextEditingController jeniskelamincontroller = TextEditingController();
+  TextEditingController alamat = TextEditingController();
   TextEditingController jalan = TextEditingController();
   TextEditingController nomer = TextEditingController();
   TextEditingController RT = TextEditingController();
@@ -25,7 +27,7 @@ class _InputNewDataState extends State<InputNewData> {
   TextEditingController provinsi = TextEditingController();
   TextEditingController kode = TextEditingController();
   TextEditingController lamatinggal = TextEditingController();
-  TextEditingController tahun = TextEditingController();
+  TextEditingController tahuncontroller = TextEditingController();
   TextEditingController perkawinan = TextEditingController();
   TextEditingController Hubungan = TextEditingController();
   TextEditingController pendidikan = TextEditingController();
@@ -140,7 +142,7 @@ class _InputNewDataState extends State<InputNewData> {
                 title: const Text('Laki-Laki'),
                 leading: Radio<String>(
                   fillColor: MaterialStateProperty.all(Color(0xff377765)),
-                  value: 'laki',
+                  value: 'laki-laki',
                   groupValue: jenisKelamin,
                   onChanged: (value) {
                     setState(() {
@@ -187,7 +189,7 @@ class _InputNewDataState extends State<InputNewData> {
                 title: Text('Alamat Asli (Sesuai Domisili) '),
                 leading: Radio<String>(
                   fillColor: MaterialStateProperty.all(Color(0xff377765)),
-                  value: 'alamat',
+                  value: 'Alamat Asli',
                   groupValue: statusAlamat,
                   onChanged: (value) {
                     setState(() {
@@ -200,7 +202,7 @@ class _InputNewDataState extends State<InputNewData> {
                 title: Text('Alamat Domisili'),
                 leading: Radio<String>(
                   fillColor: MaterialStateProperty.all(Color(0xff377765)),
-                  value: 'Domisili',
+                  value: 'Alamat Domisili',
                   groupValue: statusAlamat,
                   onChanged: (value) {
                     setState(() {
@@ -438,12 +440,22 @@ class _InputNewDataState extends State<InputNewData> {
                     suku: suku.text,
                     agama: agama.text,
                     lahir: lahir.text,
+                    jeniskelamin: jenisKelamin,
+                    alamat: statusAlamat,
                     jalan: jalan.text,
                     nomer: nomer.text,
                     RT: RT.text,
                     RW: RW.text,
                     kelurahan: kelurahan.text,
                     kabupaten: kabupaten.text,
+                    provinsi: provinsi.text,
+                    kode: kode.text,
+                    lamatinggal: lamatinggal.text,
+                    tahun: tahuncontroller.text,
+                    perkawinan: perkawinan.text,
+                    hubungan: Hubungan.text,
+                    pendidikan: pendidikan.text,
+                    pekerjaan: pekerjaan.text,
                   ),
                 );
               }));
